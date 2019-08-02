@@ -17,17 +17,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 push-sm-2">
-				<form>
+				<form method="post" enctype="multidata/formdata" action="AddData/insertData_controller">
 				  <div class="form-group">
-				    <label for="exampleInputEmail1">Sim name</label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				    <label for="sim_number">Sim number</label>
+				    <input type="text" class="form-control" name="sim_number" placeholder="Enter Sim number">
 				  </div>
 				  <div class="form-group">
-				    <label for="exampleInputPassword1">Sim price</label>
-				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				    <label for="sim_price">Sim price</label>
+				    <input type="text" class="form-control" name="sim_price" placeholder="Enter Sim price">
 				  </div>
-				  <button type="submit" class="btn btn-primary">Submit</button>
+				  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+				  <input type="submit" value="Insert Data" class="btn btn-success">
 				</form>
 			</div>
 		</div>

@@ -12,6 +12,21 @@ class AddData extends CI_Controller {
 		$this->load->view('addData_view');
 	}
 
+	public function insertData_controller()
+	{
+		// Get Data
+		$sim_number = $this->input->post('sim_number');
+		$sim_price = $this->input->post('sim_price');
+		// Put data to model
+		$this->load->model('addData_model');
+		if($this->addData_model->insert($sim_number, $sim_price)){
+			echo "Insert successfully";
+		} else {
+			echo "Error";
+		}
+		
+
+	}
 }
 
 /* End of file AddData.php */
