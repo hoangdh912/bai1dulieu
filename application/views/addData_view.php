@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Add New Sim</title>
+	<?php require_once('header.php'); ?>
 
-	<script type="text/javascript" src="<?php echo base_url(); ?>vendor/bootstrap.js"></script>
- 	<script type="text/javascript" src="<?php echo base_url(); ?>1.js"></script>
-	<link rel="stylesheet" href="<?php echo base_url(); ?>vendor/bootstrap.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>vendor/font-awesome.css">
- 	<link rel="stylesheet" href="<?php echo base_url(); ?>1.css">
-</head>
-<body>
 	<div class="container">
 		<h2 class="text-xs-center">Add new phone number:</h2>
 	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 push-sm-2">
-				<form method="post" enctype="multidata/formdata" action="AddData/insertData_controller">
+				<form method="post" enctype="multidata/formdata" action="<?php echo base_url('index.php/addData/insertData_controller'); ?>">
 				  <div class="form-group">
 				    <label for="sim_number">Sim number</label>
 				    <input type="text" class="form-control" name="sim_number" placeholder="Enter Sim number">

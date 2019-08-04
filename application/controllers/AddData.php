@@ -21,6 +21,7 @@ class AddData extends CI_Controller {
 		$this->load->model('addData_model');
 		if($this->addData_model->insert($sim_number, $sim_price)){
 			echo "Insert successfully";
+			header('Location: '. base_url() . 'index.php/showData');
 		} else {
 			echo "Error";
 		}

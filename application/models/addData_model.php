@@ -17,7 +17,7 @@ class addData_model extends CI_Model {
 		    'sim_price' => $sim_price
 		];
 		$this->db->insert('sim_number', $data);
-		$this->db->insert_id(); //return the id value
+		return $this->db->insert_id(); //return the id value
 	}
 }
 
